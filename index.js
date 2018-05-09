@@ -18,14 +18,19 @@ var connection = mysql.createConnection({
     host:"localhost",
     user: "root",
     password: "",
-    database: "workout-Schedule_db"
+    database: "workoutSchedule_db"
 });
 
 connection.connect(function(err){
     if (err){
-        console.log()
+        console.log("error connecting: " + err.stack);
+        return;
     }
+
+    console.log("connected as id " + connection.threadId);
 });
+
+
 
 app.listen(PORT, function(req, res){
     console.log("Server listening on: http://localhost: " + PORT);
