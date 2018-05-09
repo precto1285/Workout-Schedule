@@ -1,0 +1,27 @@
+{
+  "name": "workout-schedule",
+  "version": "1.0.0",
+  "description": "workout schedule app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/precto1285/Workout-Schedule.git"
+  },
+  "keywords": [
+    "workout"
+  ],
+  "author": "Philippe Recto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/precto1285/Workout-Schedule/issues"
+  },
+  "homepage": "https://github.com/precto1285/Workout-Schedule#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
