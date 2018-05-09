@@ -1,21 +1,23 @@
-//server setup
+//server setup for express
 var express = require("express");
-var bodyParser = require("body=parser");
-
 var app = express();
+var PORT = process.env.PORT || 3306;
 
-var PORT = process.env.PORT || 8080;
-
+//server setup for body-parser
+var bodyParser = require("body=parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.unsubscribe(bodyParser.json());
 
+//server setup for express-handlebars
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+//server setup for mysql
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-    host:"localhost",
+    host: "localhost",
+    port: 3306,
     user: "root",
     password: "",
     database: "workoutSchedule_db"
@@ -29,8 +31,6 @@ connection.connect(function(err){
 
     console.log("connected as id " + connection.threadId);
 });
-
-
 
 app.listen(PORT, function(req, res){
     console.log("Server listening on: http://localhost: " + PORT);

@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS workoutSchedule_db;
 CREATE DATABASE workoutSchedule_db;
 USE workoutSchedule_db;
 
@@ -19,4 +20,5 @@ CREATE TABLE dawnPlan
     eight_ounce_water_consumed INTEGER
 );
 
-
+SELECT * FROM philippePlan;
+SELECT* FROM dawnPlan;
