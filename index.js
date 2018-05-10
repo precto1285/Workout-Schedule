@@ -1,10 +1,10 @@
 //server setup for express
 var express = require("express");
 var app = express();
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 8080;
 
 //server setup for body-parser
-var bodyParser = require("body=parser");
+var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.unsubscribe(bodyParser.json());
 
@@ -19,7 +19,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "",
+    password: "root",
     database: "workoutSchedule_db"
 });
 

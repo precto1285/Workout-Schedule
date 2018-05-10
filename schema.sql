@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS workoutSchedule_db;
+
 CREATE DATABASE workoutSchedule_db;
 USE workoutSchedule_db;
 
